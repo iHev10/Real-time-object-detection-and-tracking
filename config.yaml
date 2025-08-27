@@ -7,3 +7,10 @@ DETECTION:
   WEIGHT_PATH: "detector/weights/yolo8n1280.pt"
   CONF: 0.4
   CLASSES: [0, 1]
+  CLASSES_DICT: {"person": 0, "vehicle": 1}
+
+TRACKER:
+  TRACK_DET_CONF: 0.5
+
+PROCESS_MAX_QUEUE_SIZE: 1
+  

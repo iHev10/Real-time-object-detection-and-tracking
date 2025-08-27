@@ -12,7 +12,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 class Detector:
-    def __init__(self, classes, model_name="yolo", weight_dir="detector/weights/yolo11n.pt", img_size=(640, 640), conf=0.3):
+    def __init__(self, classes=[0, 1], model_name="yolo", weight_dir="detector/weights/yolo11n.pt", img_size=(640, 640), conf=0.3):
         self.model_name = model_name.lower()
         self.weight_dir = weight_dir
         self.img_size = img_size
