@@ -1,0 +1,9 @@
+# ________________________________________________________
+
+# Detection Configurations
+
+DETECTION:
+  MODEL_NAME: "yolo"
+  WEIGHT_PATH: "detector/weights/yolo8n1280.pt"
+  CONF: 0.4
+  CLASSES: [0, 1]
