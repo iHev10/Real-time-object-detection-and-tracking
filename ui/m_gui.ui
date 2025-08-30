@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>650</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(61, 61, 61);
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1871</width>
+      <height>1000</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#0a1315;
+margin: &quot;auto&quot;
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="payesh">
+     <attribute name="title">
+      <string>پایش</string>
+     </attribute>
+     <widget class="QWidget" name="cameraViewfinder" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1600</width>
+        <height>900</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid  #a9a9a9;</string>
+      </property>
+      <widget class="QLabel" name="DET_L">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1600</width>
+         <height>900</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1600</width>
+         <height>900</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="START_DET">
+      <property name="geometry">
+       <rect>
+        <x>1620</x>
+        <y>760</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#START_DET {
+    background-color: #2d2d2d;
+    color: white;
+    font: 10pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    border: 2px solid #22d3ee; /* cyan-400 */
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+QPushButton#START_DET:hover {
+    background-color: #3a3a3a;
+    border-color: #67e8f9; /* hover tone */
+}
+
+QPushButton#START_DET:pressed {
+    background-color: #1f1f1f;
+    border-color: #a5f3fc;
+}
+
+QPushButton#START_DET:disabled {
+    background-color: #444;
+    color: #999;
+    border-color: #666;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(d) </string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/play.png</normaloff>
+        <activeon>icons/puase.png</activeon>icons/play.png</iconset>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="START_TRC">
+      <property name="geometry">
+       <rect>
+        <x>1620</x>
+        <y>810</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#START_TRC {
+    background-color: #2d2d2d;
+    color: white;
+    font: 10pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    border: 2px solid #22c55e; /* green-400 */
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+QPushButton#START_TRC:hover {
+    background-color: #3a3a3a;
+    border-color: #4ade80; /* hover green tone */
+}
+
+QPushButton#START_TRC:pressed {
+    background-color: #1f1f1f;
+    border-color: #86efac;
+}
+
+QPushButton#START_TRC:disabled {
+    background-color: #444;
+    color: #999;
+    border-color: #666;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(t)</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/play (1).png</normaloff>
+        <activeon>icons/pause.png</activeon>icons/play (1).png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CLOSE">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>910</y>
+        <width>81</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#CLOSE {
+    background-color: #2d2d2d;
+    color: white;
+    font:10pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    border: 2px solid #666;
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+QPushButton#CLOSE:hover {
+    background-color: #3a3a3a;
+    border-color: #888;
+}
+
+QPushButton#CLOSE:pressed {
+    background-color: #1f1f1f;
+    border-color: #999;
+}
+
+QPushButton#CLOSE:disabled {
+    background-color: #444;
+    color: #999;
+    border-color: #666;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(Esc)</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/logout.png</normaloff>icons/logout.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SETTINGS">
+      <property name="geometry">
+       <rect>
+        <x>1730</x>
+        <y>760</y>
+        <width>120</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#SETTINGS {
+    background-color: #2d2d2d;
+    color: white;
+    font: 10pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    border: 2px solid #888888; /* medium gray border */
+    border-radius: 12px;
+    padding: 8px 16px;
+}
+
+QPushButton#SETTINGS:hover {
+    background-color: #3a3a3a;
+    border-color: #aaaaaa;
+}
+
+QPushButton#SETTINGS:pressed {
+    background-color: #1f1f1f;
+    border-color: #cccccc;
+}
+
+QPushButton#SETTINGS:disabled {
+    background-color: #444;
+    color: #999;
+    border-color: #666;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(s) تنظیمات</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/settings (2).png</normaloff>icons/settings (2).png</iconset>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="AUTO_TRC">
+      <property name="geometry">
+       <rect>
+        <x>1740</x>
+        <y>60</y>
+        <width>103</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox#AUTO_TRC {
+    font: 11pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    color: white;
+    spacing: 8px;
+    padding: 6px 12px;
+    background-color: #2d2d2d;
+    border: 2px solid #a8a8a8;
+    border-radius: 10px;
+    direction: rtl;
+}
+
+QCheckBox#AUTO_TRC::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #a8a8a8;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+QCheckBox#AUTO_TRC::indicator:checked {
+    background-color: #a8a8a8;
+}
+
+QCheckBox#AUTO_TRC:hover {
+    background-color: #3a3a3a;
+    border-color: #50ff35;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(a)  </string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/track.png</normaloff>icons/track.png</iconset>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="MANUAL_TARGET">
+      <property name="geometry">
+       <rect>
+        <x>1740</x>
+        <y>110</y>
+        <width>105</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox#MANUAL_TARGET {
+    font: 11pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    color: white;
+    spacing: 8px;
+    padding: 6px 12px;
+    background-color: #2d2d2d;
+    border: 2px solid #a8a8a8;
+    border-radius: 10px;
+    direction: rtl;
+}
+
+QCheckBox#MANUAL_TARGET::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #a8a8a8;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+QCheckBox#MANUAL_TARGET::indicator:checked {
+    background-color: #a8a8a8;
+}
+
+QCheckBox#MANUAL_TARGET:hover {
+    background-color: #3a3a3a;
+    border-color: #50ff35;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(m)</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/mouse.png</normaloff>icons/mouse.png</iconset>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="HUMAN">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1630</x>
+        <y>60</y>
+        <width>95</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox#HUMAN {
+    font: 11pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    color: white;
+    spacing: 8px;
+    padding: 6px 12px;
+    background-color: #2d2d2d;
+    border: 2px solid #a8a8a8;
+    border-radius: 10px;
+    direction: rtl; /* جهت راست به چپ برای متن فارسی */
+}
+
+QCheckBox#HUMAN::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #a8a8a8;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+QCheckBox#HUMAN::indicator:checked {
+    background-color: #a8a8a8;
+}
+
+QCheckBox#HUMAN:hover {
+    background-color: #3a3a3a;
+    border-color: #50ff35;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(h)</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/man.png</normaloff>icons/man.png</iconset>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="tristate">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="VEHICLE">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1630</x>
+        <y>110</y>
+        <width>98</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox#VEHICLE {
+    font: 11pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    color: white;
+    spacing: 8px;
+    padding: 6px 12px;
+    background-color: #2d2d2d;
+    border: 2px solid #a8a8a8;
+    border-radius: 10px;
+    direction: rtl;
+}
+
+QCheckBox#VEHICLE::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #a8a8a8;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+QCheckBox#VEHICLE::indicator:checked {
+    background-color: #a8a8a8;
+}
+
+QCheckBox#VEHICLE:hover {
+    background-color: #3a3a3a;
+    border-color: #50ff35;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>(v) </string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/car.png</normaloff>icons/car.png</iconset>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SAFE_MODE">
+      <property name="geometry">
+       <rect>
+        <x>1670</x>
+        <y>10</y>
+        <width>121</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox#SAFE_MODE {
+    font: 11pt  &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;;
+    color: white;
+    spacing: 8px;
+    padding: 3px 12px;
+    background-color: #e11d48;
+    border: 2px solid #38bdf8;
+    border-radius: 10px;
+    direction: rtl; /* جهت راست به چپ برای متن فارسی */
+}
+
+QCheckBox#SAFE_MODE::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #38bdf8;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+QCheckBox#SAFE_MODE::indicator:checked {
+    background-color: #38bdf8;
+}
+
+QCheckBox#SAFE_MODE:hover {
+    background-color: #3a3a3a;
+    border-color: #a8a8a8;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>حالت امن</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="h_num_label">
+      <property name="geometry">
+       <rect>
+        <x>1360</x>
+        <y>910</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 10pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;</string>
+      </property>
+      <property name="text">
+       <string>تعداد اهداف انسانی تشخیص داده شده:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="v_num_label">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>910</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 10pt &quot;IRANSans&quot;, &quot;Vazir&quot;, &quot;Segoe UI&quot;</string>
+      </property>
+      <property name="text">
+       <string>تعداد خودرو تشخیص داده شده:</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="HUMAN_NUM">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>910</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="VEHICLE_NUM">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>910</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <zorder>HUMAN</zorder>
+     <zorder>VEHICLE</zorder>
+     <zorder>cameraViewfinder</zorder>
+     <zorder>START_DET</zorder>
+     <zorder>START_TRC</zorder>
+     <zorder>CLOSE</zorder>
+     <zorder>SETTINGS</zorder>
+     <zorder>AUTO_TRC</zorder>
+     <zorder>MANUAL_TARGET</zorder>
+     <zorder>SAFE_MODE</zorder>
+     <zorder>h_num_label</zorder>
+     <zorder>v_num_label</zorder>
+     <zorder>HUMAN_NUM</zorder>
+     <zorder>VEHICLE_NUM</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

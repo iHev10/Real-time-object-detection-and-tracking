@@ -1,11 +1,11 @@
 """
 Define Detector class
 """
-import det_helper
+from detector import det_helper
 import torch
 from rfdetr import RFDETRMedium
 from ultralytics import YOLO
-from custom_d_fine.src.infer.torch_model import Torch_model
+from detector.custom_d_fine.src.infer.torch_model import Torch_model
 import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'

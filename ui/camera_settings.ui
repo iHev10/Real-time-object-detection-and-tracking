@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CameraSettingsUI</class>
+ <widget class="QWidget" name="CameraSettingsUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>684</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Camera Settings</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+                background-color: rgb(15,20 ,20);
+                color: #ffffff;
+            }
+            QGroupBox {
+                border: 1px solid #555555;
+                border-radius: 5px;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                subcontrol-position: top left;
+                padding: 0 3px;
+                color: #ffffff;
+            }
+            QGroupBox#zoomGroup {
+                background-color: #353535;
+                border: 2px solid #0078d7;
+            }
+            QSlider::groove:horizontal {
+                height: 10px;
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #555555, stop:1 #0078d7);
+                border-radius: 5px;
+            }
+            QSlider::handle:horizontal {
+                background: #0078d7;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                border: 2px solid #ffffff;
+            }
+            QSlider::handle:horizontal:hover {
+                background: #005ba1;
+            }
+            QLabel#zoomLabel {
+                font-size: 16px;
+                font-weight: bold;
+                color: #0078d7;
+                text-align: center;
+            }
+            QPushButton {
+                background-color: #555555;
+                color: white;
+                border: none;
+                padding: 5px;
+                border-radius: 3px;
+            }
+            QPushButton:hover {
+                background-color: #666666;
+            }
+            QPushButton[active=&quot;true&quot;] {
+                background-color: #0078d7;
+            }
+            QPushButton[active=&quot;true&quot;]:hover {
+                background-color: #005ba1;
+            }
+            QComboBox {
+                background-color: #3c3c3c;
+                color: white;
+                border: 1px solid #555555;
+                padding: 5px;
+            }
+            QCheckBox::indicator {
+                width: 18px;
+                height: 18px;
+            }</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QGroupBox" name="zoomGroup">
+     <property name="title">
+      <string>Zoom</string>
+     </property>
+     <layout class="QVBoxLayout" name="zoomLayout">
+      <item>
+       <widget class="QLabel" name="zoomLabel">
+        <property name="text">
+         <string>Zoom: 1x</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="zoomSlider">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="zoomReset">
+        <property name="text">
+         <string>Reset</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="defogGroup">
+     <property name="title">
+      <string>Defog</string>
+     </property>
+     <layout class="QHBoxLayout" name="defogLayout">
+      <item>
+       <widget class="QCheckBox" name="defogCheck">
+        <property name="text">
+         <string>Enable Defog</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="icrGroup">
+     <property name="title">
+      <string>ICR</string>
+     </property>
+     <layout class="QHBoxLayout" name="icrLayout">
+      <item>
+       <widget class="QCheckBox" name="icrCheck">
+        <property name="text">
+         <string>Enable ICR</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="veGroup">
+     <property name="title">
+      <string>VE</string>
+     </property>
+     <layout class="QVBoxLayout" name="veLayout">
+      <item>
+       <widget class="QCheckBox" name="veCheck">
+        <property name="text">
+         <string>Enable VE</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="veModeCombo">
+        <item>
+         <property name="text">
+          <string>Dark</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bright</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="aeGroup">
+     <property name="title">
+      <string>AE</string>
+     </property>
+     <layout class="QVBoxLayout" name="aeLayout">
+      <item>
+       <widget class="QComboBox" name="aeModeCombo">
+        <item>
+         <property name="text">
+          <string>Auto</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Manual</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="manualAeFrame">
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="manualAeLayout">
+         <item>
+          <layout class="QHBoxLayout" name="shutterLayout">
+           <item>
+            <widget class="QLabel" name="shutterLabel">
+             <property name="text">
+              <string>Shutter: 5</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="shutterMinus">
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="shutterPlus">
+             <property name="text">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="shutterReset">
+             <property name="text">
+              <string>Reset</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="irisLayout">
+           <item>
+            <widget class="QLabel" name="irisLabel">
+             <property name="text">
+              <string>Iris: 7</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="irisMinus">
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="irisPlus">
+             <property name="text">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="irisReset">
+             <property name="text">
+              <string>Reset</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="brightLayout">
+           <item>
+            <widget class="QLabel" name="brightLabel">
+             <property name="text">
+              <string>Bright: 14</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="brightMinus">
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="brightPlus">
+             <property name="text">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="brightReset">
+             <property name="text">
+              <string>Reset</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="exposeGroup">
+     <property name="title">
+      <string>Expose</string>
+     </property>
+     <layout class="QVBoxLayout" name="exposeLayout">
+      <item>
+       <widget class="QCheckBox" name="exposeCheck">
+        <property name="text">
+         <string>Enable Expose</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="exposeFrame">
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="exposeButtonLayout">
+         <item>
+          <widget class="QPushButton" name="exposeHigh">
+           <property name="text">
+            <string>High</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="exposeNormal">
+           <property name="text">
+            <string>Normal</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="exposeLow">
+           <property name="text">
+            <string>Low</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="focusGroup">
+     <property name="title">
+      <string>Focus</string>
+     </property>
+     <layout class="QHBoxLayout" name="focusLayout">
+      <item>
+       <widget class="QPushButton" name="focusNear">
+        <property name="text">
+         <string>Near</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="focusFar">
+        <property name="text">
+         <string>Far</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="focusAuto">
+        <property name="text">
+         <string>Auto</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
